@@ -87,9 +87,7 @@ const types = [
 const catalogFragment = document.createDocumentFragment();
 const catalogList = document.querySelector(".results__list");
 const popup = document.querySelector(".popup");
-const modalOpenImgs = document.querySelectorAll(".product__image");
-const modalOpenLinks = document.querySelectorAll(".product__title");
-const modalCloseButton = document.querySelector(".popup__close");
+
 
 // Случайное ЦЕЛОЕ число в диапазоне.
 const getRandomIntNumber = (min, max) => {
@@ -204,7 +202,9 @@ const createCatalogItem = obj => {
 
 refreshProductsCatalog();
 
-
+const modalOpenImgs = document.querySelectorAll(".product__image");
+const modalOpenLinks = document.querySelectorAll(".product__title");
+const modalCloseButton = document.querySelector(".popup__close");
 
 // Открытие модального окна и добавление слушателя кнопки ESC по нажатию на картинку
 modalOpenImgs.forEach(img => img.addEventListener('click', () =>
